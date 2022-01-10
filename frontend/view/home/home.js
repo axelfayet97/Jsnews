@@ -1,7 +1,7 @@
 /**
  * Gère l'affichage et les interactions de la page d'accueil
  */
-let api = fetch("http://localhost:4000/api/article/") ;
+let api = fetch("http://localhost:4000/api/article/");
 function fetchArticles() {
     api
         .then(function (res) {
