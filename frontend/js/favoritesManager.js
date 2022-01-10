@@ -4,9 +4,12 @@
 
 
 // AJOUTER UN ARTICLE AUX FAVORIS
-function addFavorite() {
 
-};
+// document.querySelector(".addFavorite").addEventListener("click", function addToFavorite(e) {
+//     e.preventDefault()
+//     console.log('ope,rg');
+// });
+
 
 
 // RETIRER UN ARTICLE DES FAVORIS
