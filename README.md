@@ -71,4 +71,4 @@ POST /api/article/
 > [  
 > &nbsp;&nbsp;&nbsp;{article},  
 > &nbsp;&nbsp;&nbsp;...  
-> ]  
+> ]  # JSNews
