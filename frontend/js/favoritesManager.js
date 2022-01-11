@@ -4,11 +4,11 @@
 
 
 // AJOUTER UN ARTICLE AUX FAVORIS
+let addFavorite = document.querySelector(".addFavorite");
 
-// document.querySelector(".addFavorite").addEventListener("click", function addToFavorite(e) {
-//     e.preventDefault()
-//     console.log('ope,rg');
-// });
+addFavorite.addEventListener("click", function() {
+    console.log('clic !');
+});
 
 
 
