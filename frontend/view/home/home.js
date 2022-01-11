@@ -18,6 +18,7 @@ function fetchArticles() {
                 document
                     .querySelector(".container")
                     .innerHTML +=
+                       value[i].title + '<br /> '; 
         //             '"<div class="col-12 mt-5">
         // <div class="card article">
         //     <div class="card-header ">
@@ -33,7 +34,6 @@ function fetchArticles() {
         //     </div>
         // </div>
         // </div>';
-                    value[i].title + '<br /> ';
             }
 
         })
@@ -45,32 +45,8 @@ function fetchArticles() {
 
 document.addEventListener("load", fetchArticles());
 
-
-// var modifArticles = fetch("http://localhost:4000/api/article/")
-//     .then(function (res) {
-//         if (res.ok) {
-//             // get promise
-//             var resultat = res.json();
-//             // console.log("resultat" + resultat);
-
-
-//         }
-//     })
-//     .then(function (valueDeSortie) {
-//         console.log("API OK", valueDeSortie);
-//         return valueDeSortie;
-//     })
-//     .catch(function (err) {
-//         // Une erreur est survenue
-//         console.log('Une erreur est survenue.')
-//     });
-
-// console.log("valeur de sortie" + resultat);
-
-
 // for each articles in article : display ce modèle
 
 // for (value in values) {
 //     console.log("valeur" + value);
 // }
-
