@@ -15,27 +15,32 @@ function fetchArticles() {
         .then(function (value) {
             // console.log("API OK", value);
             for (var i in value) {
+                let valuesArray = [];
+                valuesArray.push(value[i].title);
+                valuesArray.push(value[i].id);
+                valuesArray.push(value[i].publicationDate);
+                valuesArray.push(value[i].image);
+                valuesArray.push(value[i].content);
                 document
                     .querySelector(".container")
                     .innerHTML +=
-                    value[i].title + '<br /> ';
-                //             '"<div class="col-12 mt-5">
-                // <div class="card article">
-                //     <div class="card-header ">
-                //         <h5 class="card-title d-flex justify-content-between>`${ value[i].title + '<br /> '}`<span class="publication-date">{{ date de publication }}</span></h5>
-                //     </div>
-                //     <img src="{{ image }}" class="card-img-top">
-                //     <span class="fa-stack fa-2x addFavorite">
-                //         <i class="fas fa-star fa-stack-1x"></i>
-                //         <i class="far fa-star fa-stack-1x"></i>
-                //     </span>
-                //     <div class="card-body">
-                //         <p class="card-text">{{ Contenu }}</p>
-                //     </div>
-                // </div>
-                // </div>';
-            }
-
+                    `<div class="col-12 mt-5">
+                        <div class="card article">
+                            <div class="card-header ">
+                                <h5 class="card-title d-flex justify-content-between><span class="publication-date"> ‘${value[i].publicationDate}‘</span></h5>
+                            </div>
+                            <img src="‘${console.log(value[i].image)}${"./backend/" + value[i].image}‘" class="card-img-top" >
+                            <span class="fa-stack fa-2x addFavorite">
+                                <i class="fas fa-star fa-stack-1x"></i>
+                                <i class="far fa-star fa-stack-1x"></i>
+                            </span>
+                            <div class="card-body">
+                                <p class="card-text">‘${value[i].content}‘</p>
+                            </div>
+                        </div>
+                    </div>`
+            };
+            return value;
         })
         .catch(function (err) {
             // Une erreur est survenue
@@ -44,3 +49,5 @@ function fetchArticles() {
 };
 
 document.addEventListener("load", fetchArticles());
+
+

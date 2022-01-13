@@ -4,12 +4,12 @@
 
 
 class article {
-    constructor(jsonArticle) {
-        jsonArticle && Object.assign(this, jsonArticle);
+    constructor(id, title, publicationDate, image, content) {
     }
 
+    
     /* METHODE TRI DATE */
-
+    
 };
 
-console.log(article)
+// console.log(article)
